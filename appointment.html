@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo">Dr Bilal Clinic</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="work.html">Work</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="location.html">Location</a>
+        </nav>
+    </div>
+</header>
+
+<section class="appointment">
+    <h2>Book Appointment</h2>
+
+    <form id="appointmentForm" class="appointment-form">
+
+        <label>Name</label>
+        <input type="text" id="name" required>
+
+        <label>Age</label>
+        <input type="number" id="age" required>
+
+        <label>Gender</label>
+        <select id="gender" required>
+            <option value="" disabled selected>Select</option>
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+
+        <label>Service</label>
+        <select id="service" required>
+            <option value="" disabled selected>Select Aesthetic Procedure</option>
+            <option>Skin Whitening</option>
+            <option>Acne / Scar Treatment</option>
+            <option>Botox / Fillers</option>
+            <option>PRP</option>
+            <option>Laser Hair Removal</option>
+            <option>Hair Treatment</option>
+        </select>
+
+        <label>Preferred Date</label>
+        <input type="date" id="date" required>
+
+        <label>Preferred Time</label>
+        <input type="time" id="time" required>
+
+        <label for="notes">Notes (optional)</label>
+        <textarea id="notes" rows="3" placeholder="Any additional details"></textarea>
+
+        <button type="submit" class="btn">Send Appointment</button>
+
+    </form>
+</section>
+
+<script src="js/appointment.js"></script>
+</body>
+</html>
