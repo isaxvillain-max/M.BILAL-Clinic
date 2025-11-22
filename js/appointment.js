@@ -14,22 +14,21 @@ document.getElementById("appointmentForm").addEventListener("submit", function(e
         return;
     }
 
-    let msg = `📆 *APPOINTMENT REQUEST*
+    const msg = `\u{1F4C6} *APPOINTMENT REQUEST*
 --------------------------------
-👤 Name: ${name}
-🎂 Age: ${age}
-⚧ Gender: ${gender}
-📝 Appointment For: ${service}
-📅 Date: ${date}
-⏰ Time: ${time}
-${notes ? "📝 Notes: " + notes : ""}
+\u{1F464} Name: ${name}
+\u{1F382} Age: ${age}
+\u{269B} Gender: ${gender}
+\u{1F4DD} Appointment For: ${service}
+\u{1F4C5} Date: ${date}
+\u{23F0} Time: ${time}
+${notes ? "\u{1F4DD} Notes: " + notes : ""}
 --------------------------------
-📍 Dr Muhammad Bilal
+\u{1F4CD} Dr Muhammad Bilal
 Surgeon + Aesthetic CPD (UK)
 `;
 
-    // FIXED: Use plain number with country code, no spaces, no +
-    const whatsappNumber = "923159050124";
+    const whatsappNumber = "923159050124"; // Country code + number, no spaces or +
     const whatsappURL = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(msg);
 
     window.open(whatsappURL, "_blank");
