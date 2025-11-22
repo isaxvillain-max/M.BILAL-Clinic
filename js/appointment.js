@@ -28,7 +28,9 @@ ${notes ? "📝 Notes: " + notes : ""}
 Surgeon + Aesthetic CPD (UK)
 `;
 
-    const whatsappURL = "https://wa.me/+92 3159050124?text=" + encodeURIComponent(msg);
+    // FIXED: Use plain number with country code, no spaces, no +
+    const whatsappNumber = "923159050124";
+    const whatsappURL = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(msg);
+
     window.open(whatsappURL, "_blank");
 });
-
