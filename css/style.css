@@ -33,14 +33,14 @@ nav {
 }
 
 nav .logo {
-  font-size: 22px;
+  font-size: clamp(18px, 3vw, 22px);
   font-weight: 600;
   color: #2563eb;
 }
 
 nav a {
   text-decoration: none;
-  font-size: 15px;
+  font-size: clamp(12px, 2.2vw, 15px);
   color: #1c1c1c;
   margin-left: 20px;
   transition: 0.2s;
@@ -56,6 +56,7 @@ nav .btn {
   padding: 8px 16px;
   border-radius: 6px;
   transition: 0.3s;
+  font-size: clamp(12px, 2vw, 15px);
 }
 
 nav .btn:hover {
@@ -77,12 +78,12 @@ nav .btn:hover {
 }
 
 .hero h1 {
-  font-size: 35px;
+  font-size: clamp(24px, 5vw, 35px);
   margin-bottom: 10px;
 }
 
 .hero p {
-  font-size: 18px;
+  font-size: clamp(12px, 3vw, 18px);
   opacity: 0.9;
   max-width: 500px;
 }
@@ -91,9 +92,8 @@ nav .btn:hover {
   margin-top: 15px;
 }
 
-/* Hero image */
 .hero-image img {
-  max-width: 400px;
+  max-width: min(90%, 400px);
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   transition: transform 0.3s;
@@ -113,7 +113,7 @@ nav .btn:hover {
 }
 
 .section-title {
-  font-size: 26px;
+  font-size: clamp(20px, 4vw, 26px);
   margin-bottom: 20px;
   color: #1d4ed8;
   font-weight: 600;
@@ -130,13 +130,13 @@ nav .btn:hover {
 }
 
 .about-container img {
-  width: 280px;
+  width: min(100%, 260px);
   border-radius: 10px;
 }
 
 .about-text {
   flex: 1;
-  font-size: 16px;
+  font-size: clamp(13px, 2.5vw, 16px);
 }
 
 .about-stats {
@@ -153,6 +153,7 @@ nav .btn:hover {
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   font-weight: 600;
   color: #2563eb;
+  font-size: clamp(12px, 2.2vw, 15px);
 }
 
 /* ===========================
@@ -160,7 +161,7 @@ nav .btn:hover {
 =========================== */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
 
@@ -180,8 +181,7 @@ nav .btn:hover {
 
 .service-box img {
   width: 100%;
-  height: 150px;
-  object-fit: cover;
+  height: auto;
   border-radius: 10px;
   margin-bottom: 10px;
 }
@@ -191,20 +191,37 @@ nav .btn:hover {
 =========================== */
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 20px;
 }
 
-.work-item img, .work-item video {
+.work-item {
+  background: #fff;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.work-item img,
+.work-item video {
   width: 100%;
+  height: auto;
   border-radius: 12px;
 }
 
 /* ===========================
-   VIDEO GALLERY
+   VIDEO GALLERY CARDS
 =========================== */
-.video-box video {
+.video-card {
+  background: #fff;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.video-card video {
   width: 100%;
+  height: auto;
   border-radius: 12px;
 }
 
@@ -216,7 +233,7 @@ form {
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  max-width: 600px;
+  width: min(95%, 600px);
   margin: auto;
 }
 
@@ -226,13 +243,8 @@ input, select, textarea {
   margin: 12px 0;
   border-radius: 8px;
   border: 1px solid #d4d4d4;
-  font-size: 15px;
+  font-size: clamp(13px, 2.5vw, 15px);
   transition: all 0.3s ease;
-}
-
-input:focus, select:focus, textarea:focus {
-  border-color: #2563eb;
-  box-shadow: 0 0 5px rgba(37,99,235,0.5);
 }
 
 button {
@@ -242,7 +254,7 @@ button {
   color: #fff;
   border: none;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: clamp(14px, 3vw, 16px);
   cursor: pointer;
   margin-top: 10px;
   transition: all 0.3s ease;
@@ -257,7 +269,7 @@ button:hover {
 =========================== */
 .reviews-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 20px;
 }
 
@@ -266,17 +278,10 @@ button:hover {
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.review-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .stars {
   color: #facc15;
-  margin-bottom: 5px;
 }
 
 /* ===========================
@@ -284,7 +289,7 @@ button:hover {
 =========================== */
 .location-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
 }
 
@@ -294,17 +299,6 @@ button:hover {
   border-radius: 12px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.location-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.location-card a.btn {
-  margin-top: 10px;
-  display: inline-block;
 }
 
 /* ===========================
@@ -316,7 +310,7 @@ footer {
   padding: 25px;
   text-align: center;
   margin-top: 50px;
-  font-size: 14px;
+  font-size: clamp(12px, 2vw, 14px);
 }
 
 /* ===========================
