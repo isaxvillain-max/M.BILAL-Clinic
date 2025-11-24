@@ -127,7 +127,6 @@ nav .btn:hover {
   animation: pulseGlow 2.5s infinite;
 }
 
-/* Hero image */
 .hero-image img {
   max-width: 400px;
   border-radius: 20px;
@@ -139,7 +138,6 @@ nav .btn:hover {
   transform: scale(1.05) rotate(1deg);
 }
 
-/* Floating shapes */
 .hero::before, .hero::after {
   content: '';
   position: absolute;
@@ -359,8 +357,8 @@ button:hover {
 }
 
 .review-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(37,99,235,0.25);
+  transform: translateY(-8px) rotateX(3deg);
+  box-shadow: 0 15px 35px rgba(37,99,235,0.35);
 }
 
 .review-card::before {
@@ -384,6 +382,12 @@ button:hover {
 .stars {
   color: #facc15;
   margin-bottom: 8px;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.stars:hover {
+  transform: scale(1.2) rotate(5deg);
 }
 
 /* ===========================
@@ -402,11 +406,30 @@ button:hover {
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
 }
 
 .location-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(37,99,235,0.25);
+  transform: translateY(-8px) rotateX(2deg);
+  box-shadow: 0 18px 40px rgba(37,99,235,0.35);
+}
+
+.location-card::before {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(37,99,235,0.1), transparent);
+  top: -10%;
+  left: -10%;
+  pointer-events: none;
+  animation: pulse 4s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
 }
 
 .location-card a.btn {
