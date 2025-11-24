@@ -13,7 +13,6 @@ body {
   color: #1c1c1c;
   line-height: 1.6;
   overflow-x: hidden;
-  perspective: 1200px;
 }
 
 /* ===========================
@@ -126,9 +125,9 @@ nav .btn:hover {
 .hero .btn {
   margin-top: 15px;
   animation: pulseGlow 2.5s infinite;
-  cursor: pointer;
 }
 
+/* Hero image */
 .hero-image img {
   max-width: 400px;
   border-radius: 20px;
@@ -137,7 +136,7 @@ nav .btn:hover {
 }
 
 .hero-image img:hover {
-  transform: scale(1.05) rotateY(15deg) rotateX(5deg);
+  transform: scale(1.05) rotate(1deg);
 }
 
 /* Floating shapes */
@@ -166,7 +165,6 @@ nav .btn:hover {
   padding: 50px 20px;
   max-width: 1200px;
   margin: auto;
-  perspective: 800px;
 }
 
 .section-title {
@@ -190,31 +188,6 @@ nav .btn:hover {
 }
 
 /* ===========================
-   MICRO INTERACTIONS (Mouse follow tilt)
-=========================== */
-.interactive-card {
-  transform-style: preserve-3d;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  will-change: transform;
-}
-
-.interactive-card:hover {
-  box-shadow: 0 20px 50px rgba(37,99,235,0.25);
-}
-
-.interactive-card:active {
-  transform: scale(0.97);
-}
-
-.interactive-card[data-tilt] {
-  perspective: 1000px;
-}
-
-.interactive-card[data-tilt]:hover {
-  transform: rotateY(var(--rotate-y, 0deg)) rotateX(var(--rotate-x, 0deg));
-}
-
-/* ===========================
    ABOUT PAGE
 =========================== */
 .about-container {
@@ -232,7 +205,8 @@ nav .btn:hover {
 }
 
 .about-container img:hover {
-  transform: scale(1.05) rotateY(10deg);
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 15px 35px rgba(37,99,235,0.2);
 }
 
 .about-text {
@@ -256,10 +230,11 @@ nav .btn:hover {
   color: #2563eb;
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
+  perspective: 1000px;
 }
 
 .stat-card:hover {
-  transform: translateY(-5px) rotateY(5deg);
+  transform: rotateX(10deg) rotateY(10deg) translateY(-5px);
   box-shadow: 0 12px 30px rgba(37,99,235,0.3);
 }
 
@@ -279,10 +254,11 @@ nav .btn:hover {
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
+  perspective: 1000px;
 }
 
 .service-card:hover {
-  transform: translateY(-10px) rotateY(5deg);
+  transform: rotateX(8deg) rotateY(8deg) translateY(-10px);
   box-shadow: 0 15px 35px rgba(37,99,235,0.25);
 }
 
@@ -316,7 +292,7 @@ nav .btn:hover {
 }
 
 .work-item img:hover, .work-item video:hover {
-  transform: scale(1.05) rotateY(5deg);
+  transform: scale(1.03) rotate(1deg);
   box-shadow: 0 15px 35px rgba(37,99,235,0.2);
 }
 
@@ -330,6 +306,7 @@ form {
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   max-width: 650px;
   margin: auto;
+  perspective: 1000px;
 }
 
 input, select, textarea {
@@ -363,7 +340,7 @@ button {
 
 button:hover {
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 10px 35px rgba(37,99,235,0.5);
+  box-shadow: 0 10px 30px rgba(37,99,235,0.5);
 }
 
 /* ===========================
@@ -383,10 +360,11 @@ button:hover {
   transition: transform 0.3s, box-shadow 0.3s;
   position: relative;
   overflow: hidden;
+  perspective: 1000px;
 }
 
 .review-card:hover {
-  transform: translateY(-8px) rotateY(5deg);
+  transform: rotateX(8deg) rotateY(8deg) translateY(-8px);
   box-shadow: 0 15px 35px rgba(37,99,235,0.25);
 }
 
@@ -429,10 +407,11 @@ button:hover {
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
+  perspective: 1000px;
 }
 
 .location-card:hover {
-  transform: translateY(-8px) rotateY(5deg);
+  transform: rotateX(8deg) rotateY(8deg) translateY(-8px);
   box-shadow: 0 15px 35px rgba(37,99,235,0.25);
 }
 
