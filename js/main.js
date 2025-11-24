@@ -16,7 +16,6 @@ document.querySelectorAll(".service-card").forEach(card => {
     const serviceName = card.getAttribute("data-service");
     const appointmentURL = "appointment.html";
     
-    // Redirect with query parameter for autofill
     window.location.href = `${appointmentURL}?service=${encodeURIComponent(serviceName)}`;
   });
 });
