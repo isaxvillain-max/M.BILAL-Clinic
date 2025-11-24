@@ -97,8 +97,10 @@ nav .btn:hover {
   gap: 20px;
   overflow: hidden;
   position: relative;
+  perspective: 1000px;
 }
 
+/* Hero text gradient animation */
 .hero h1 {
   font-size: 38px;
   margin-bottom: 15px;
@@ -122,11 +124,14 @@ nav .btn:hover {
   max-width: 500px;
 }
 
+/* Hero button glow pulse */
 .hero .btn {
   margin-top: 15px;
   animation: pulseGlow 2.5s infinite;
+  cursor: pointer;
 }
 
+/* Hero image 3D hover tilt + shadow */
 .hero-image img {
   max-width: 400px;
   border-radius: 20px;
@@ -135,9 +140,10 @@ nav .btn:hover {
 }
 
 .hero-image img:hover {
-  transform: scale(1.05) rotate(1deg);
+  transform: scale(1.05) rotateY(15deg) rotateX(5deg);
 }
 
+/* Floating hero shapes */
 .hero::before, .hero::after {
   content: '';
   position: absolute;
@@ -163,6 +169,7 @@ nav .btn:hover {
   padding: 50px 20px;
   max-width: 1200px;
   margin: auto;
+  perspective: 800px;
 }
 
 .section-title {
@@ -199,11 +206,11 @@ nav .btn:hover {
   width: 300px;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .about-container img:hover {
-  transform: scale(1.05);
+  transform: scale(1.05) rotateY(10deg);
 }
 
 .about-text {
@@ -230,7 +237,7 @@ nav .btn:hover {
 }
 
 .stat-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) rotateY(5deg);
   box-shadow: 0 12px 30px rgba(37,99,235,0.3);
 }
 
@@ -253,7 +260,7 @@ nav .btn:hover {
 }
 
 .service-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) rotateY(5deg);
   box-shadow: 0 15px 35px rgba(37,99,235,0.25);
 }
 
@@ -287,7 +294,7 @@ nav .btn:hover {
 }
 
 .work-item img:hover, .work-item video:hover {
-  transform: scale(1.03);
+  transform: scale(1.05) rotateY(5deg);
   box-shadow: 0 15px 35px rgba(37,99,235,0.2);
 }
 
@@ -333,8 +340,8 @@ button {
 }
 
 button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(37,99,235,0.5);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 35px rgba(37,99,235,0.5);
 }
 
 /* ===========================
@@ -357,8 +364,8 @@ button:hover {
 }
 
 .review-card:hover {
-  transform: translateY(-8px) rotateX(3deg);
-  box-shadow: 0 15px 35px rgba(37,99,235,0.35);
+  transform: translateY(-8px) rotateY(5deg);
+  box-shadow: 0 15px 35px rgba(37,99,235,0.25);
 }
 
 .review-card::before {
@@ -382,12 +389,6 @@ button:hover {
 .stars {
   color: #facc15;
   margin-bottom: 8px;
-  display: inline-block;
-  transition: transform 0.3s;
-}
-
-.stars:hover {
-  transform: scale(1.2) rotate(5deg);
 }
 
 /* ===========================
@@ -406,30 +407,11 @@ button:hover {
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
-  position: relative;
-  overflow: hidden;
 }
 
 .location-card:hover {
-  transform: translateY(-8px) rotateX(2deg);
-  box-shadow: 0 18px 40px rgba(37,99,235,0.35);
-}
-
-.location-card::before {
-  content: '';
-  position: absolute;
-  width: 120%;
-  height: 120%;
-  background: radial-gradient(circle, rgba(37,99,235,0.1), transparent);
-  top: -10%;
-  left: -10%;
-  pointer-events: none;
-  animation: pulse 4s infinite alternate;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.05); }
+  transform: translateY(-8px) rotateY(5deg);
+  box-shadow: 0 15px 35px rgba(37,99,235,0.25);
 }
 
 .location-card a.btn {
@@ -444,7 +426,7 @@ button:hover {
 }
 
 .location-card a.btn:hover {
-  transform: translateY(-3px);
+  transform: translateY(-3px) scale(1.02);
   box-shadow: 0 10px 30px rgba(37,99,235,0.5);
 }
 
