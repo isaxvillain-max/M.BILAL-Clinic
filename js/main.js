@@ -1,23 +1,18 @@
-// Auto-hide broken images
-document.querySelectorAll("img").forEach(img => {
-  img.onerror = () => img.style.display = "none";
+// Service click redirect with auto-fill
+document.querySelectorAll(".service-card").forEach(card => {
+  card.addEventListener("click", () => {
+    const service = card.getAttribute("data-service");
+    // Redirect to appointment page with service query param
+    window.location.href = `appointment.html?service=${encodeURIComponent(service)}`;
+  });
 });
 
-// Auto-hide broken videos
-document.querySelectorAll("video").forEach(vid => {
-  vid.onerror = () => vid.style.display = "none";
-});
-
-// Optional: interactive tilt effect for cards
-const tiltCards = document.querySelectorAll(".service-card, .review-card, .work-item, .stat-card, .location-card");
-tiltCards.forEach(card => {
-  card.addEventListener("mousemove", e => {
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left - rect.width/2;
-    const y = e.clientY - rect.top - rect.height/2;
-    card.style.transform = `rotateY(${x*0.05}deg) rotateX(${-y*0.05}deg)`;
-  });
-  card.addEventListener("mouseleave", () => {
-    card.style.transform = "";
-  });
+// Prefill appointment form if service param exists
+window.addEventListener("DOMContentLoaded", () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const serviceParam = urlParams.get("service");
+  if (serviceParam) {
+    const serviceInput = document.getElementById("service");
+    if (serviceInput) serviceInput.value = serviceParam;
+  }
 });
