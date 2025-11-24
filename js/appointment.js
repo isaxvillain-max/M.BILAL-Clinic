@@ -31,7 +31,6 @@ document.getElementById("appointmentForm").addEventListener("submit", function(e
         return;
     }
 
-    // Use simple text symbols instead of emojis
     let msg = "*APPOINTMENT REQUEST*\n";
     msg += "--------------------------------\n";
     msg += "Name: " + name + "\n";
@@ -44,7 +43,7 @@ document.getElementById("appointmentForm").addEventListener("submit", function(e
     msg += "--------------------------------\n";
     msg += "Dr Muhammad Bilal\nSurgical tech (Pakistan) + Aesthetician (Canada)";
 
-    const whatsappNumber = "923159050124"; // full number with country code
+    const whatsappNumber = "923159050124";
     const whatsappURL = "https://api.whatsapp.com/send?phone=" + whatsappNumber + "&text=" + encodeURIComponent(msg);
 
     window.open(whatsappURL, "_blank");
