@@ -1,18 +1,22 @@
-// Auto-fill service on appointment page
-document.querySelectorAll(".service-card").forEach(card => {
-  card.addEventListener("click", () => {
-    const service = card.getAttribute("data-service");
-    // Redirect to appointment page with query param
-    window.location.href = `appointment.html?service=${encodeURIComponent(service)}`;
-  });
+// Auto-hide empty images
+document.querySelectorAll("img").forEach(img => {
+  img.onerror = () => img.style.display = "none";
 });
 
-// On appointment page load, prefill the service
-window.addEventListener("DOMContentLoaded", () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const serviceParam = urlParams.get("service");
-  if (serviceParam) {
-    const serviceInput = document.getElementById("service");
-    if (serviceInput) serviceInput.value = serviceParam;
-  }
+// Auto-hide empty videos
+document.querySelectorAll("video").forEach(vid => {
+  vid.onerror = () => vid.style.display = "none";
+});
+
+// =====================
+// Services click autofill
+// =====================
+document.querySelectorAll(".service-card").forEach(card => {
+  card.addEventListener("click", () => {
+    const serviceName = card.getAttribute("data-service");
+    const appointmentURL = "appointment.html";
+    
+    // Redirect with query parameter for autofill
+    window.location.href = `${appointmentURL}?service=${encodeURIComponent(serviceName)}`;
+  });
 });
