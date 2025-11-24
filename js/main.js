@@ -1,13 +1,13 @@
-// Service click redirect with auto-fill
+// Auto-fill service on appointment page
 document.querySelectorAll(".service-card").forEach(card => {
   card.addEventListener("click", () => {
     const service = card.getAttribute("data-service");
-    // Redirect to appointment page with service query param
+    // Redirect to appointment page with query param
     window.location.href = `appointment.html?service=${encodeURIComponent(service)}`;
   });
 });
 
-// Prefill appointment form if service param exists
+// On appointment page load, prefill the service
 window.addEventListener("DOMContentLoaded", () => {
   const urlParams = new URLSearchParams(window.location.search);
   const serviceParam = urlParams.get("service");
