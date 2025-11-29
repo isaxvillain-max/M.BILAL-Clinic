@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aesthetic Products - Mr Bilal Clinic</title>
-
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/products.css" />
 </head>
@@ -19,6 +18,7 @@
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a href="work.html">Work</a>
+      <a href="products.html">Products</a>
       <a href="reviews.html">Reviews</a>
       <a href="location.html">Location</a>
       <a href="appointment.html" class="btn">Book Appointment</a>
@@ -33,41 +33,55 @@
        SKIN CARE PRODUCTS
   ========================== -->
   <h3 class="category-title">⭐ Skin Care Products</h3>
-
   <div class="products-grid">
 
     <div class="product-card">
-      <img src="images/work/face-wash.jpg" alt="">
+      <img src="images/work/face-wash.jpg" alt="Glow & Revive Anti-Acnes Face Wash" onerror="this.src='images/placeholder.png';">
       <h4>Glow & Revive Anti-Acnes Face Wash</h4>
       <p class="price">Rs. 1200</p>
+      <p class="description">
+        Gentle foaming face wash enriched with tea tree extract and salicylic acid. Helps remove excess oil, prevent acne breakouts, and keep your skin hydrated and fresh.
+      </p>
       <button class="buy-btn" data-product="Glow & Revive Anti-Acnes Face Wash">Buy Now</button>
     </div>
 
     <div class="product-card">
-      <img src="images/work/sunscreen.jpg" alt="">
+      <img src="images/work/sunscreen.jpg" alt="Glow & Revive Broad Spectrum Sunscreen" onerror="this.src='images/placeholder.png';">
       <h4>Glow & Revive Broad Spectrum Sunscreen</h4>
       <p class="price">Rs. 800</p>
+      <p class="description">
+        Lightweight SPF 50 sunscreen that protects skin from UVA and UVB rays. Enriched with antioxidants to prevent premature aging and maintain skin radiance.
+      </p>
       <button class="buy-btn" data-product="Glow & Revive Broad Spectrum Sunscreen">Buy Now</button>
     </div>
 
     <div class="product-card">
-      <img src="images/work/brightening-serum.jpg" alt="">
+      <img src="images/work/brightening-serum.jpg" alt="Glow & Revive Brightening Serum" onerror="this.src='images/placeholder.png';">
       <h4>Glow & Revive Brightening Serum</h4>
       <p class="price">Rs. 2500</p>
+      <p class="description">
+        Vitamin C enriched serum to brighten skin tone, fade dark spots, and enhance skin clarity. Lightweight and fast-absorbing.
+      </p>
       <button class="buy-btn" data-product="Glow & Revive Brightening Serum">Buy Now</button>
     </div>
 
     <div class="product-card">
-      <img src="images/work/vitamin-c.jpg" alt="">
+      <img src="images/work/vitamin-c.jpg" alt="Glow & Revive Vitamin C Serum" onerror="this.src='images/placeholder.png';">
       <h4>Glow & Revive Vitamin C Serum</h4>
       <p class="price">Rs. 2500</p>
+      <p class="description">
+        Potent Vitamin C serum with hyaluronic acid to reduce fine lines, improve skin elasticity, and boost natural radiance. Suitable for all skin types.
+      </p>
       <button class="buy-btn" data-product="Glow & Revive Vitamin C Serum">Buy Now</button>
     </div>
 
     <div class="product-card">
-      <img src="images/work/refine-glow.jpg" alt="">
+      <img src="images/work/refine-glow.jpg" alt="Glow & Revive Refine Glow Serum" onerror="this.src='images/placeholder.png';">
       <h4>Glow & Revive Refine Glow Serum</h4>
       <p class="price">Rs. 2500</p>
+      <p class="description">
+        Multi-action serum that refines pores, evens skin texture, and provides a radiant glow. Contains niacinamide and natural extracts for smooth skin.
+      </p>
       <button class="buy-btn" data-product="Glow & Revive Refine Glow Serum">Buy Now</button>
     </div>
 
@@ -78,20 +92,25 @@
   ========================== -->
 
   <h3 class="category-title">⭐ Hair Care Products</h3>
-
   <div class="products-grid">
 
     <div class="product-card">
-      <img src="images/work/root-shot.jpg" alt="">
+      <img src="images/work/root-shot.jpg" alt="Glow & Revive Root Shot Hair Serum" onerror="this.src='images/placeholder.png';">
       <h4>Glow & Revive Root Shot Hair Serum</h4>
       <p class="price">Rs. 3200</p>
+      <p class="description">
+        Hair serum with biotin and keratin to strengthen roots, reduce hair fall, and promote healthy, shiny hair. Apply daily for best results.
+      </p>
       <button class="buy-btn" data-product="Glow & Revive Root Shot Hair Serum">Buy Now</button>
     </div>
 
     <div class="product-card">
-      <img src="images/work/sebo-rid.jpg" alt="">
+      <img src="images/work/sebo-rid.jpg" alt="Glow & Revive Sebo-Rid Shampoo" onerror="this.src='images/placeholder.png';">
       <h4>Glow & Revive Sebo-Rid Shampoo</h4>
       <p class="price">Rs. 1500</p>
+      <p class="description">
+        Anti-dandruff and sebum control shampoo. Helps cleanse scalp, reduce oiliness, and keep hair light and refreshed. Suitable for daily use.
+      </p>
       <button class="buy-btn" data-product="Glow & Revive Sebo-Rid Shampoo">Buy Now</button>
     </div>
 
@@ -100,7 +119,7 @@
 </section>
 
 <!-- ============================
-      ORDER POPUP (MODAL)
+      ORDER MODAL
 =============================== -->
 
 <div id="orderModal" class="modal">
@@ -113,6 +132,19 @@
 
     <label>Product</label>
     <input type="text" id="orderProduct" readonly>
+
+    <label>Your Name</label>
+    <input type="text" id="orderName" placeholder="Enter your full name">
+
+    <label>Age</label>
+    <input type="number" id="orderAge" placeholder="Enter your age">
+
+    <label>Gender</label>
+    <select id="orderGender">
+      <option value="">Select Gender</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
 
     <label>Your Address / Google Maps Link</label>
     <textarea id="orderAddress" placeholder="Enter your full address here..."></textarea>
