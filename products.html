@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aesthetic Products - Mr Bilal Clinic</title>
+
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/products.css" />
 </head>
 
 <body>
@@ -29,8 +31,9 @@
 
   <!-- =======================
        SKIN CARE PRODUCTS
-  ========================= -->
+  ========================== -->
   <h3 class="category-title">⭐ Skin Care Products</h3>
+
   <div class="products-grid">
 
     <div class="product-card">
@@ -72,8 +75,10 @@
 
   <!-- =======================
        HAIR CARE PRODUCTS
-  ========================= -->
+  ========================== -->
+
   <h3 class="category-title">⭐ Hair Care Products</h3>
+
   <div class="products-grid">
 
     <div class="product-card">
@@ -94,6 +99,33 @@
 
 </section>
 
+<!-- ============================
+      ORDER POPUP (MODAL)
+=============================== -->
+
+<div id="orderModal" class="modal">
+  <div class="modal-content">
+
+    <span class="close-btn">&times;</span>
+
+    <h2 class="modal-title">Assalamualaikum</h2>
+    <p class="modal-sub">Place Your Order</p>
+
+    <label>Product</label>
+    <input type="text" id="orderProduct" readonly>
+
+    <label>Your Address / Google Maps Link</label>
+    <textarea id="orderAddress" placeholder="Enter your full address here..."></textarea>
+
+    <div class="location-note">
+      📍 <strong>Note:</strong> To share your exact location, open Google Maps, tap the pin, click “Share”, then copy the link and paste it here.
+    </div>
+
+    <button id="confirmOrder" class="confirm-btn">Send Order on WhatsApp</button>
+
+  </div>
+</div>
+
 <footer>
   <p>&copy; 2025 Mr Muhammad Bilal Aesthetic Clinic. All rights reserved.</p>
 </footer>
@@ -103,4 +135,3 @@
 
 </body>
 </html>
-
