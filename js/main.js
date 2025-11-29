@@ -19,3 +19,17 @@ document.querySelectorAll(".service-card").forEach(card => {
     window.location.href = `${appointmentURL}?service=${encodeURIComponent(serviceName)}`;
   });
 });
+
+/* =========================
+   PRODUCT BUY POPUP REDIRECT
+========================= */
+
+document.querySelectorAll(".buy-btn").forEach(button => {
+  button.addEventListener("click", () => {
+    const productName = button.getAttribute("data-product");
+
+    // redirect to popup page
+    window.location.href = `appointment.html?product=${encodeURIComponent(productName)}`;
+  });
+});
+
