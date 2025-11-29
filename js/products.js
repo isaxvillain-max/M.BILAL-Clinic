@@ -2,6 +2,9 @@
 const modal = document.getElementById("orderModal");
 const closeBtn = document.querySelector(".close-btn");
 const orderProduct = document.getElementById("orderProduct");
+const orderName = document.getElementById("orderName");
+const orderAge = document.getElementById("orderAge");
+const orderGender = document.getElementById("orderGender");
 const orderAddress = document.getElementById("orderAddress");
 const confirmOrder = document.getElementById("confirmOrder");
 
@@ -28,10 +31,13 @@ window.onclick = function(e){
 // SEND ORDER TO WHATSAPP
 confirmOrder.addEventListener("click", () => {
   let product = orderProduct.value;
+  let name = orderName.value.trim();
+  let age = orderAge.value.trim();
+  let gender = orderGender.value;
   let address = orderAddress.value.trim();
 
-  if (address === "") {
-    alert("Please enter your complete address.");
+  if(!name || !age || !gender || !address){
+    alert("Please fill all fields before sending order.");
     return;
   }
 
@@ -40,6 +46,9 @@ confirmOrder.addEventListener("click", () => {
 I want to order:
 
 Product: ${product}
+Name: ${name}
+Age: ${age}
+Gender: ${gender}
 Address / Google Maps: ${address}
 
 Please confirm my order.`;
