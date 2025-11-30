@@ -515,7 +515,7 @@ img:hover, video:hover {
   filter: drop-shadow(0 20px 40px rgba(37,99,235,0.25));
 }
 
-/* Floating SMS Button */
+/* Floating SMS-style Button (redirects to WhatsApp) */
 .sms-float {
   position: fixed;
   bottom: 20px;
@@ -538,12 +538,12 @@ img:hover, video:hover {
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
-/* SMS Icon (envelope) */
+/* Envelope Icon inside button */
 .sms-icon {
   position: relative;
-  width: 24px;
-  height: 16px;
-  background: white;
+  width: 28px;
+  height: 18px;
+  background-color: white;
   border-radius: 2px;
 }
 
@@ -555,12 +555,12 @@ img:hover, video:hover {
   left: 0;
   width: 0;
   height: 0;
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
   border-bottom: 6px solid white;
 }
 
-/* Optional: small shadow inside flap */
+/* Optional subtle inner shadow */
 .sms-icon::after {
   content: "";
   position: absolute;
@@ -571,6 +571,7 @@ img:hover, video:hover {
   background: rgba(0,0,0,0.05);
   border-radius: 2px;
 }
+
 
 
 
