@@ -540,37 +540,79 @@ img:hover, video:hover {
   transform: scale(1.1);
 }
 
-/* WhatsApp Icon using CSS */
-.whatsapp-icon {
+/* Floating WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366; /* WhatsApp green */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 100;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1) rotate(-10deg);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  animation: bounce 0.5s;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0% { transform: scale(1.1) rotate(-10deg); }
+  50% { transform: scale(1.2) rotate(0deg); }
+  100% { transform: scale(1.1) rotate(-10deg); }
+}
+
+/* WhatsApp Logo inside the button */
+.whatsapp-logo {
   position: relative;
   width: 28px;
   height: 28px;
-  border-radius: 50%;
-  background: white;
 }
 
-.whatsapp-icon::before {
+/* White chat bubble */
+.whatsapp-logo::before {
   content: "";
   position: absolute;
-  left: 6px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 50%;
+  clip-path: polygon(0% 20%, 100% 0%, 100% 80%, 0% 100%);
+}
+
+/* Phone inside bubble */
+.whatsapp-logo::after {
+  content: "";
+  position: absolute;
+  left: 7px;
   top: 5px;
-  width: 10px;
+  width: 14px;
   height: 18px;
   border: 2px solid #25D366;
   border-radius: 2px;
-  transform: rotate(45deg);
+  transform: rotate(135deg);
 }
 
-.whatsapp-icon::after {
+/* Optional: subtle inner glow */
+.whatsapp-float::before {
   content: "";
   position: absolute;
-  left: 12px;
-  top: 8px;
-  width: 4px;
-  height: 4px;
-  background: #25D366;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
+  box-shadow: 0 0 8px rgba(37, 211, 102, 0.5);
+  z-index: 0;
 }
+
 
 
 
