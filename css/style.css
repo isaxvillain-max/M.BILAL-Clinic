@@ -516,7 +516,7 @@ img:hover, video:hover {
 }
 
 /* Floating SMS-style Button (redirects to WhatsApp) */
-.sms-float {
+.whatsapp-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -533,13 +533,13 @@ img:hover, video:hover {
   z-index: 100;
 }
 
-.sms-float:hover {
+.whatsapp-float:hover {
   transform: scale(1.1);
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
 /* Envelope Icon inside button */
-.sms-icon {
+.whatsapp-icon {
   position: relative;
   width: 28px;
   height: 18px;
@@ -548,7 +548,7 @@ img:hover, video:hover {
 }
 
 /* Envelope flap */
-.sms-icon::before {
+.whatsapp-icon::before {
   content: "";
   position: absolute;
   top: -6px;
@@ -561,7 +561,7 @@ img:hover, video:hover {
 }
 
 /* Optional subtle inner shadow */
-.sms-icon::after {
+.whatsapp-icon::after {
   content: "";
   position: absolute;
   top: 0;
@@ -571,6 +571,7 @@ img:hover, video:hover {
   background: rgba(0,0,0,0.05);
   border-radius: 2px;
 }
+
 
 
 
