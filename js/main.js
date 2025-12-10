@@ -20,4 +20,13 @@ document.querySelectorAll(".service-card").forEach(card => {
   });
 });
 
+// Show username on homepage
+const welcomeBox = document.getElementById("welcomeUser");
+if (welcomeBox) {
+    const name = localStorage.getItem("username");
+    if (name) {
+        welcomeBox.textContent = `Hey, ${name} 👋`;
+    }
+}
+
 
