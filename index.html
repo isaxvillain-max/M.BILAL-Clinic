@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mr Muhammad Bilal - Aesthetic Surgeon</title>
-    <link rel="stylesheet" href="css/style.css">
 
-    <!-- NEW: login.css -->
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/login.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
@@ -25,7 +24,7 @@
             <a href="reviews.html">Reviews</a>
             <a href="location.html">Location</a>
 
-            <!-- NEW: Login / Logout -->
+            <!-- Login Buttons -->
             <a id="loginBtnNav" class="btn login-btn-nav">Login</a>
             <a id="logoutBtnNav" class="btn logout-btn-nav" style="display:none;">Logout</a>
 
@@ -53,27 +52,46 @@
     <span class="whatsapp-icon"></span>
 </a>
 
-
-<!-- ===================================================== -->
-<!-- 🟦 LOGIN POPUP ADDED (Same style as your screenshot) -->
-<!-- ===================================================== -->
+<!-- ============================= -->
+<!-- LOGIN + SIGNUP POPUP (A STYLE) -->
+<!-- ============================= -->
 
 <div id="loginPopup" class="login-popup">
-    <div class="login-container">
-        <h2>Welcome Back!</h2>
+    <div class="login-box">
 
-        <input type="text" id="loginUsername" placeholder="Username">
-        <input type="password" id="loginPassword" placeholder="Password">
+        <!-- LEFT SIDE BLUE PANEL -->
+        <div class="panel-left">
+            <h1 id="panelTitle">WELCOME BACK!</h1>
+        </div>
 
-        <button id="loginSubmit">Login</button>
+        <!-- RIGHT FORM AREA -->
+        <div class="form-area">
 
-        <p class="close-login" id="closeLogin">Close</p>
+            <!-- LOGIN FORM -->
+            <div id="loginForm" class="form-section">
+                <h2>Login</h2>
+                <input type="text" id="loginUsername" placeholder="Username">
+                <input type="password" id="loginPassword" placeholder="Password">
+                <button id="loginSubmit">Login</button>
+                <p class="switch-screen">Don't have an account? <span id="goSignup">Signup</span></p>
+            </div>
+
+            <!-- SIGNUP FORM -->
+            <div id="signupForm" class="form-section" style="display:none;">
+                <h2>Register</h2>
+                <input type="text" id="signupUsername" placeholder="Username">
+                <input type="email" id="signupEmail" placeholder="Email">
+                <input type="password" id="signupPassword" placeholder="Password">
+                <button id="signupSubmit">Register</button>
+                <p class="switch-screen">Already have an account? <span id="goLogin">Login</span></p>
+            </div>
+
+            <p id="closeLogin" class="close-login">Close</p>
+        </div>
     </div>
 </div>
 
 <script src="main.js"></script>
-
-<!-- NEW: login.js -->
 <script src="login.js"></script>
 
 </body>
