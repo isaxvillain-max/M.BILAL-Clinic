@@ -10,41 +10,87 @@
     z-index: 9999;
 }
 
-.login-container {
-    width: 330px;
-    padding: 30px;
-    background: linear-gradient(135deg, #0a1a2a, #014b64);
-    border-radius: 12px;
-    text-align: center;
-    color: white;
-    box-shadow: 0 0 15px #00eaff;
-    border: 1px solid #00eaff;
+/* MAIN BOX */
+.login-box {
+    width: 780px;
+    height: 420px;
+    display: flex;
+    background: #02121f;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 0 25px #00eaff;
 }
 
-.login-container input {
+/* LEFT BLUE PANEL LIKE YOUR PHOTO */
+.panel-left {
+    width: 50%;
+    background: linear-gradient(135deg, #0a1a2a, #017ea1);
+    padding: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid #00eaff;
+}
+
+/* RIGHT SIDE FORM */
+.form-area {
+    width: 50%;
+    background: #062431;
+    padding: 40px;
+    color: white;
+    position: relative;
+}
+
+/* Form Sections */
+.form-section {
+    animation: fadeIn 0.3s ease;
+}
+
+.form-section h2 {
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+.form-section input {
     width: 100%;
-    padding: 10px;
-    margin-top: 12px;
-    border-radius: 8px;
-    border: none;
+    padding: 12px;
     background: #ffffff15;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 12px;
     color: white;
 }
 
-.login-container button {
+/* Buttons */
+.form-section button {
     width: 100%;
-    padding: 10px;
-    margin-top: 15px;
-    background: #00eaff;
+    padding: 12px;
     border: none;
+    background: #00eaff;
     border-radius: 8px;
-    color: black;
     font-weight: bold;
     cursor: pointer;
 }
 
-.close-login {
-    margin-top: 15px;
+/* Switch links */
+.switch-screen span {
+    color: #00eaff;
     cursor: pointer;
+    font-weight: bold;
+}
+
+/* Close */
+.close-login {
+    text-align: center;
     text-decoration: underline;
+    cursor: pointer;
+    margin-top: 20px;
+    color: #00eaff;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
