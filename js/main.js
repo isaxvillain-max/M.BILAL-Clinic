@@ -22,13 +22,12 @@ document.querySelectorAll(".service-card").forEach(card => {
 
 // Show username on homepage
 const welcomeBox = document.getElementById("welcomeUser");
+const loginBtn = document.getElementById("loginBtn");
+
 if (welcomeBox) {
     const name = localStorage.getItem("username");
     if (name) {
         welcomeBox.textContent = `Hey, ${name} 👋`;
+        if (loginBtn) loginBtn.style.display = "none"; // hide login button
     }
 }
-
-
-
-
