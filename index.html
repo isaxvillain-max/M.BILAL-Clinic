@@ -6,6 +6,9 @@
     <title>Mr Muhammad Bilal - Aesthetic Surgeon</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Login CSS (added) -->
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
 
@@ -24,7 +27,29 @@
         </nav>
     </div>
 </header>
+
+<!-- Welcome Text -->
 <p id="welcomeUser" class="welcome-user"></p>
+
+<!-- LOGIN BUTTON -->
+<div id="loginBtn" class="login-btn">Login</div>
+
+<!-- LOGIN POPUP -->
+<div id="loginModal" class="login-modal">
+  <div class="login-box">
+      <span id="closeLogin" class="login-close">&times;</span>
+
+      <h2>Welcome Back</h2>
+      <p class="login-sub">Login to continue</p>
+
+      <input type="text" id="loginName" placeholder="Enter your name">
+      <input type="email" id="loginEmail" placeholder="Enter your email">
+      <input type="password" id="loginPass" placeholder="Enter password">
+
+      <button id="loginSubmit" class="login-submit">Login</button>
+  </div>
+</div>
+
 <section class="hero">
     <div class="hero-text">
         <h1>Aesthetic Excellence With Professional Care</h1>
@@ -35,13 +60,17 @@
         <img src="images/doctor/doctor-profile.jpg" onerror="this.style.display='none';">
     </div>
 </section>
- <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/923159050124?text=Assalamu%20Alaikum%2C%20I%20want%20to%20order%20..." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/923159050124?text=Assalamu%20Alaikum%2C%20I%20want%20to%20order%20..." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
     <span class="whatsapp-icon"></span>
-  </a>
+</a>
+
+<!-- Existing JS -->
+<script src="js/main.js"></script>
+
+<!-- Login JS (added) -->
+<script src="js/login.js"></script>
 
 </body>
 </html>
-
-
-
