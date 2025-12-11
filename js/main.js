@@ -1,33 +1,23 @@
-// Auto-hide empty images
+// Auto-hide images/videos
 document.querySelectorAll("img").forEach(img => {
   img.onerror = () => img.style.display = "none";
 });
-
-// Auto-hide empty videos
 document.querySelectorAll("video").forEach(vid => {
   vid.onerror = () => vid.style.display = "none";
 });
 
-// =====================
-// Services click autofill
-// =====================
+// Autofill services
 document.querySelectorAll(".service-card").forEach(card => {
   card.addEventListener("click", () => {
-    const serviceName = card.getAttribute("data-service");
-    const appointmentURL = "appointment.html";
-    
-    window.location.href = `${appointmentURL}?service=${encodeURIComponent(serviceName)}`;
+    const name = card.getAttribute("data-service");
+    window.location.href = "appointment.html?service=" + encodeURIComponent(name);
   });
 });
 
-// Show username on homepage
+// Welcome username
 const welcomeBox = document.getElementById("welcomeUser");
-const loginBtn = document.getElementById("loginBtn");
+const name = localStorage.getItem("username");
 
-if (welcomeBox) {
-    const name = localStorage.getItem("username");
-    if (name) {
-        welcomeBox.textContent = `Hey, ${name} 👋`;
-        if (loginBtn) loginBtn.style.display = "none"; // hide login button
-    }
+if (name && welcomeBox) {
+    welcomeBox.textContent = `Hey, ${name} 👋`;
 }
