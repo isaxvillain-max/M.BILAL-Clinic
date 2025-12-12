@@ -60,8 +60,8 @@ document.getElementById("signupSubmit").addEventListener("click", () => {
     loginBtnNav.style.display = "none";
     logoutBtnNav.style.display = "inline-block";
 
-    const welcome = document.getElementById("welcomeUser");
-    if (welcome) welcome.textContent = `Hey, ${username} 👋`;
+   document.getElementById("welcomeUser").textContent = `Hey, ${username} 👋`;
+   document.getElementById("welcomeCard").style.display = "block";
 });
 
 // LOGOUT
