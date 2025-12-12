@@ -15,9 +15,13 @@ document.querySelectorAll(".service-card").forEach(card => {
 });
 
 // Welcome username
-const welcomeBox = document.getElementById("welcomeUser");
-const name = localStorage.getItem("username");
+const welcomeCard = document.getElementById("welcomeCard");
+const welcomeUser = document.getElementById("welcomeUser");
+const savedName = localStorage.getItem("username");
 
-if (name && welcomeBox) {
-    welcomeBox.textContent = `Hey, ${name} 👋`;
+if (savedName) {
+    welcomeUser.textContent = `Hey, ${savedName} 👋`;
+    welcomeCard.style.display = "block";
 }
+
+
